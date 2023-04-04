@@ -1,4 +1,10 @@
 # Pants Airflow Minimal
+## Install Pants and Python
+1. Install Pants: https://www.pantsbuild.org/docs/installation
+2. Install Python 3.10.x
+   + Because in [pants.toml](pants.toml), we set the intepreter to Python 3.10.x
+   + Because on Ubuntu 22.04, the default Python is Python 3.10.x
+3. No Python Virtual Environment needed
 ## Step-by-step Guide to launch Airflow
 ### Step 1: Build the package and install it to `$HOME/airflow/bin/python`
 ``` bash
