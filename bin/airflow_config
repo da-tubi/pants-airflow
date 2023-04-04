@@ -1,5 +1,3 @@
 #!/bin/bash
 
-$HOME/airflow/bin/python -m airflow_main db init
-
 $HOME/airflow/bin/python -m airflow_config
