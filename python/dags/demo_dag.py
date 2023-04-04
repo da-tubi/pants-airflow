@@ -12,7 +12,7 @@ dag_args = {
 
 
 dag = DAG(
-    dag_id='test_dag',
+    dag_id='demo_dag',
     default_args=dag_args,
     schedule_interval='@daily',
 )

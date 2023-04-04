@@ -1,8 +1,5 @@
 # See https://www.pantsbuild.org/docs/python-third-party-dependencies for more info
-python_requirement(
+python_requirements(
     name="requirements",
-    requirements=[
-        "apache-airflow==2.4.3",
-    ],
 )
 

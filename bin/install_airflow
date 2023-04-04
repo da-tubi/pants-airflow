@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pants package airflow:pex
+
+PEX=`pwd`/dist/airflow/pex.pex
+TARGET=$HOME/airflow/bin/python
+
+cmp --silent $PEX $HOME/bin/airflow || \
+  (mkdir -p $HOME/airflow/bin && \
+   cp $PEX $TARGET && \
+   echo "Deloyed to $TARGET")

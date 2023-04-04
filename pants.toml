@@ -6,7 +6,7 @@ backend_packages.add = [
 ]
 
 [source]
-root_patterns = ["python"]
+root_patterns = ["python", "airflow"]
 
 
 [python]
