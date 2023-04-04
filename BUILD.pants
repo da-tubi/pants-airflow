@@ -2,14 +2,7 @@
 python_requirement(
     name="requirements",
     requirements=[
-        "pandas==2.0.0",
+        "apache-airflow==2.4.3",
     ],
-)
-
-# See https://www.pantsbuild.org/docs/reference-python_sources for more info
-python_sources(name = "sources", sources=["**/*.py"])
-
-pex_binary(name = "pex", 
-  entry_point="hello:main"
 )
 

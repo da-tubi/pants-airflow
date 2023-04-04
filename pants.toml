@@ -6,7 +6,8 @@ backend_packages.add = [
 ]
 
 [source]
-root_patterns = ["/"]
+root_patterns = ["python"]
+
 
 [python]
 interpreter_constraints = ["==3.10.*"]
