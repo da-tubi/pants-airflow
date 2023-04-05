@@ -14,5 +14,5 @@ interpreter_constraints = ["==3.10.*"]
 enable_resolves = true
 
 [python-bootstrap]
-search_path = ["%(homedir)s/python_3.10/bin"]
+search_path = ["%(homedir)s/python_3.10/bin", "<PATH>"]
 
