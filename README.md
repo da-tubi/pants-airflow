@@ -8,7 +8,7 @@
 
 Here is a recommended way to install Python 3.10.x:
 ```
-xrepo install "python 3.10.6"
+bin/install_python
 ```
 
 ## Step-by-step Guide to launch Airflow

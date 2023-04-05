@@ -14,8 +14,5 @@ interpreter_constraints = ["==3.10.*"]
 enable_resolves = true
 
 [python-bootstrap]
-search_path = [
-    "%(homedir)s/.xmake/packages/p/python/3.10.6/e357df3d007a461995be04740991afd2/bin/",
-    "<PATH>"
-]
+search_path = ["%(homedir)s/python_3.10/bin"]
 
