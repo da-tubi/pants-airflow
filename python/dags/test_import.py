@@ -1,5 +1,5 @@
-from airflow import Dag
+from airflow.models.dag import DAG
 
 def test_airflow_import():
-    dag = Dag(dag_id="dag_id")
+    dag = DAG(dag_id="dag_id")
     print(dag.dag_id)
