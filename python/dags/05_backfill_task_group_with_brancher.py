@@ -52,12 +52,12 @@ with DAG(dag_id="backfill_task_group_with_brancher", default_args=dag_args) as d
             feature_name = f"feature_{i}"
             with TaskGroup(feature_name) as feature:
                 cond = BranchPythonOperator(task_id=f"branch_{feature_name}", python_callable=branch_by_config)
-                real_task = BashOperator(task_id="real_task", bash_command="echo {{ execution_date }}")
                 end = EmptyOperator(task_id="end")
-                with TaskGroup(f"backfill_tg") as backfill_group:
-                    start_tg = EmptyOperator(task_id=f"start")
-                    task_to_backfill = BashOperator(task_id="real_task_for_backfill", bash_command="echo {{ execution_date }}")
-                    start_tg >> task_to_backfill
+                with TaskGroup(f"real_task_group") as real_task_group:
+                    start_r = EmptyOperator(task_id="start")
+                    real_task = BashOperator(task_id="real_task", bash_command="echo {{ execution_date }}")
+                    end_r = EmptyOperator(task_id="end")
+                    start_r >> real_task >> end_r
                 with TaskGroup(f"backfill_one_week") as backfill_one_week:
                     start_7 = EmptyOperator(task_id=f"start")
                     end_7 = EmptyOperator(task_id="end")
@@ -66,7 +66,7 @@ with DAG(dag_id="backfill_task_group_with_brancher", default_args=dag_args) as d
                         task = BashOperator(task_id=f"real_task_{i}", bash_command="echo {{ execution_date.add(days=-%s).isoformat()[:10] }}" % i)
                         tasks.append(task)
                     start_7 >> tasks >> end_7
-                cond >> [real_task, backfill_group, backfill_one_week] >> end
+                cond >> [real_task_group, backfill_one_week] >> end
             prepare >> feature
 
     end = EmptyOperator(task_id="end", trigger_rule=TriggerRule.NONE_FAILED)
