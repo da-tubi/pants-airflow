@@ -41,7 +41,7 @@ def branch_by_config(**context) -> str:
                 else:
                     return f"{prefix_name}.backfill_tg.start"
     else:
-        return f"{prefix_name}.real_task"
+        return f"{prefix_name}.real_task_group.start"
 
 with DAG(dag_id="backfill_task_group_with_brancher", default_args=dag_args) as dag:
     start = EmptyOperator(task_id="start")

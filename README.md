@@ -54,4 +54,5 @@ For more info, see https://airflow.apache.org/docs/apache-airflow/stable/start.h
 Juse remove the $AIRFLOW_HOME:
 ```
 rm -rf $HOME/airflow
+# bin/airflow_reset
 ```
