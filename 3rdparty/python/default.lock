@@ -9,7 +9,7 @@
 //     "CPython==3.10.*"
 //   ],
 //   "generated_with_requirements": [
-//     "apache-airflow==2.6.0"
+//     "apache-airflow==2.6.1"
 //   ],
 //   "manylinux": "manylinux2014",
 //   "requirement_constraints": [],
@@ -143,13 +143,13 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "43942c3d4bf2620c466b91c0f4fca136fe51ae972394a0cc8b90810d664e4f5c",
-              "url": "https://files.pythonhosted.org/packages/83/64/3d091f50da38aca0774e30053db2bd3483ba6358674a60d82fd6dd6248b6/alembic-1.10.4-py3-none-any.whl"
+              "hash": "f0e74af5a6ade86b72770790188aaf64122c9cba64efd1d7ff3323ac3fdb75e0",
+              "url": "https://files.pythonhosted.org/packages/59/4d/28b13ff3a9c26988f8c32f460cc34ee806ac46038232ee493b9baaaf6164/alembic-1.11.0-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "295b54bbb92c4008ab6a7dcd1e227e668416d6f84b98b3c4446a2bc6214a556b",
-              "url": "https://files.pythonhosted.org/packages/14/b3/e471678c278e5f9beb9cb9b6acc2cfbb5628545d9795a9e05627f87c7e7c/alembic-1.10.4.tar.gz"
+              "hash": "d8bf706124e96e526889ac9c87a0d50debd9ef325ef32ae5391cf0315bdab4e1",
+              "url": "https://files.pythonhosted.org/packages/2b/6b/0985db485964616c50a88b92b12f2635650a92d4eedfdc4e22fa50a5d2ef/alembic-1.11.0.tar.gz"
             }
           ],
           "project_name": "alembic",
@@ -162,7 +162,7 @@
             "typing-extensions>=4"
           ],
           "requires_python": ">=3.7",
-          "version": "1.10.4"
+          "version": "1.11.0"
         },
         {
           "artifacts": [
@@ -205,13 +205,13 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "a7375b1b738f129462e70eb5a1bb95f604862fcb6437047ee159e5b885739402",
-              "url": "https://files.pythonhosted.org/packages/1b/c3/4d4a4050ddc8f9be1ce54c87ec0655cae462eab767474380c9bd19654372/apache_airflow-2.6.0-py3-none-any.whl"
+              "hash": "628b42491b5f922fef0ebbdba0b5341fe32782826b6817e56069358378911f1e",
+              "url": "https://files.pythonhosted.org/packages/9f/fb/de202fb4d423fd0ceca0e135cb42ec260286fd338630e47ed9b485c62da1/apache_airflow-2.6.1-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "78cc7957546fd74eee09234ad39fe7a6c913a114d66077fc85410a2cedec51ea",
-              "url": "https://files.pythonhosted.org/packages/2c/db/d59ec4b76f00f3521d5a719b771971003ca5ba69e5dcbb11b1d84dcaa049/apache-airflow-2.6.0.tar.gz"
+              "hash": "26f5d5f39b5e49b4cc7cc3f4e536078623251262185c37fe4ea839cf0b566c91",
+              "url": "https://files.pythonhosted.org/packages/7b/45/137fb7e919ab7cf986a24a87b0d0edb46facc214a0b168afe8a3fcf1b247/apache-airflow-2.6.1.tar.gz"
             }
           ],
           "project_name": "apache-airflow",
@@ -306,6 +306,7 @@
             "apache-airflow-providers-apache-hive; extra == \"devel_ci\"",
             "apache-airflow-providers-apache-hive; extra == \"devel_hadoop\"",
             "apache-airflow-providers-apache-hive; extra == \"hive\"",
+            "apache-airflow-providers-apache-hive>=5.1.0; extra == \"apache.hive\"",
             "apache-airflow-providers-apache-impala; extra == \"all\"",
             "apache-airflow-providers-apache-impala; extra == \"all_dbs\"",
             "apache-airflow-providers-apache-impala; extra == \"apache.impala\"",
@@ -434,7 +435,6 @@
             "apache-airflow-providers-hashicorp; extra == \"devel_all\"",
             "apache-airflow-providers-hashicorp; extra == \"devel_ci\"",
             "apache-airflow-providers-hashicorp; extra == \"hashicorp\"",
-            "apache-airflow-providers-hive>=5.1.0; extra == \"apache.hive\"",
             "apache-airflow-providers-http",
             "apache-airflow-providers-http; extra == \"all\"",
             "apache-airflow-providers-http; extra == \"devel_all\"",
@@ -800,10 +800,10 @@
             "cryptography>=2.0.0; extra == \"devel_ci\"",
             "cryptography>=2.0.0; extra == \"devel_hadoop\"",
             "cryptography>=2.0.0; extra == \"kubernetes\"",
-            "dask!=2022.10.1,>=2.9.0; extra == \"all\"",
-            "dask!=2022.10.1,>=2.9.0; extra == \"dask\"",
-            "dask!=2022.10.1,>=2.9.0; extra == \"devel_all\"",
-            "dask!=2022.10.1,>=2.9.0; extra == \"devel_ci\"",
+            "dask!=2022.10.1,<2023.5.0,>=2.9.0; extra == \"all\"",
+            "dask!=2022.10.1,<2023.5.0,>=2.9.0; extra == \"dask\"",
+            "dask!=2022.10.1,<2023.5.0,>=2.9.0; extra == \"devel_all\"",
+            "dask!=2022.10.1,<2023.5.0,>=2.9.0; extra == \"devel_ci\"",
             "databricks-sql-connector<3.0.0,>=2.0.0; extra == \"all\"",
             "databricks-sql-connector<3.0.0,>=2.0.0; extra == \"all_dbs\"",
             "databricks-sql-connector<3.0.0,>=2.0.0; extra == \"devel_all\"",
@@ -813,10 +813,10 @@
             "datadog>=0.14.0; extra == \"devel_ci\"",
             "deprecated>=1.2.13",
             "dill>=0.2.2",
-            "distributed>=2.11.1; extra == \"all\"",
-            "distributed>=2.11.1; extra == \"dask\"",
-            "distributed>=2.11.1; extra == \"devel_all\"",
-            "distributed>=2.11.1; extra == \"devel_ci\"",
+            "distributed<2023.5.0,>=2.11.1; extra == \"all\"",
+            "distributed<2023.5.0,>=2.11.1; extra == \"dask\"",
+            "distributed<2023.5.0,>=2.11.1; extra == \"devel_all\"",
+            "distributed<2023.5.0,>=2.11.1; extra == \"devel_ci\"",
             "dnspython>=1.13.0; extra == \"all\"",
             "dnspython>=1.13.0; extra == \"all_dbs\"",
             "dnspython>=1.13.0; extra == \"devel_all\"",
@@ -1649,7 +1649,7 @@
             "zenpy>=2.0.24; extra == \"devel_ci\""
           ],
           "requires_python": "~=3.7",
-          "version": "2.6.0"
+          "version": "2.6.1"
         },
         {
           "artifacts": [
@@ -2499,19 +2499,19 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "a428f10de4de4774389734c986a01b4af2d802d26717108b0f1b9356862937c5",
-              "url": "https://files.pythonhosted.org/packages/41/3b/11740ed0f36e408ff3d5bd259af0c3330d899c17562f9964b7fbc90756f9/docutils-0.20-py3-none-any.whl"
+              "hash": "96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6",
+              "url": "https://files.pythonhosted.org/packages/26/87/f238c0670b94533ac0353a4e2a1a771a0cc73277b88bff23d3ae35a256c1/docutils-0.20.1-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "f75a5a52fbcacd81b47e42888ad2b380748aaccfb3f13af0fe69deb759f01eb6",
-              "url": "https://files.pythonhosted.org/packages/e6/a9/8ddfaa7a9414e42520e0041d1354ebda699e4eb1b47e2f1b6d8bda66aba6/docutils-0.20.tar.gz"
+              "hash": "f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b",
+              "url": "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz"
             }
           ],
           "project_name": "docutils",
           "requires_dists": [],
           "requires_python": ">=3.7",
-          "version": "0.20"
+          "version": "0.20.1"
         },
         {
           "artifacts": [
@@ -2749,22 +2749,22 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "e87c9daef93336e75dbf114f5fdec92f67bac21cef541b8d37173461b6174eca",
-              "url": "https://files.pythonhosted.org/packages/45/70/4f23d37b59b0a3e3042a92b134b42b1c9e91429879ce77506981392de500/Flask_Session-0.4.1-py2.py3-none-any.whl"
+              "hash": "1619bcbc16f04f64e90f8e0b17145ba5c9700090bb1294e889956c1282d58631",
+              "url": "https://files.pythonhosted.org/packages/3e/d4/b374183251054928ddb5e72f9a0d3d764d0f2af0638fbbdf205df26e55e3/flask_session-0.5.0-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "2f3954a8ca2fd4fdc9ffda97f5f469668f5f18fab0fe2f69d496d17be312d96e",
-              "url": "https://files.pythonhosted.org/packages/35/3e/9e6489d60f1c59e920dfb5a05aea1fcc0659f6630593089bebbefd6ddd00/Flask-Session-0.4.1.tar.gz"
+              "hash": "190875e6aebf2953c6803d42379ef3b934bc209ef8ef006f97aecb08f5aaeb86",
+              "url": "https://files.pythonhosted.org/packages/19/bf/b8b3e20cf03d3938ef7e94970e43491a49386c65e07aca7e6a4e583be28f/Flask-Session-0.5.0.tar.gz"
             }
           ],
           "project_name": "flask-session",
           "requires_dists": [
-            "Flask<2.3,>=0.8",
-            "cachelib"
+            "cachelib",
+            "flask>=2.2"
           ],
-          "requires_python": null,
-          "version": "0.4.1"
+          "requires_python": ">=3.7",
+          "version": "0.5.0"
         },
         {
           "artifacts": [
@@ -3259,13 +3259,13 @@
           "artifacts": [
             {
               "algorithm": "sha256",
-              "hash": "919db5cdc00670b7a5bef992f0a00a5bdbe1bf5fc8ea840df8735ffde0e170b0",
-              "url": "https://files.pythonhosted.org/packages/a4/50/9f03a873812da28db6d01093fd1aff0f1306eb9e256c4f5f1fe03fe907c3/limits-3.4.0-py3-none-any.whl"
+              "hash": "3ad525faeb7e1c63859ca1cae34c9ed22a8f22c9ea9d96e2f412869f6b36beb9",
+              "url": "https://files.pythonhosted.org/packages/10/bc/a6e092b2431fb533a18106567f63760869b1c883485c2f1d1562fd220a5b/limits-3.5.0-py3-none-any.whl"
             },
             {
               "algorithm": "sha256",
-              "hash": "fc5e01a6a96b6f78b7e8a8f4610a93f3ebe3351a1bcd8cd93763a90fa52bc7fe",
-              "url": "https://files.pythonhosted.org/packages/54/58/651969d328d212f927249db8b74982fbdf3249df2b6c33a66409f333ceb7/limits-3.4.0.tar.gz"
+              "hash": "b728c9ab3c6163997b1d11a51d252d951efd13f0d248ea2403383952498f8a22",
+              "url": "https://files.pythonhosted.org/packages/f1/78/15330c57130f1a3228865ff555382a301ef5c254cc1fc7153ae5a827787d/limits-3.5.0.tar.gz"
             }
           ],
           "project_name": "limits",
@@ -3297,7 +3297,7 @@
             "typing-extensions"
           ],
           "requires_python": ">=3.7",
-          "version": "3.4.0"
+          "version": "3.5.0"
         },
         {
           "artifacts": [
@@ -5030,7 +5030,7 @@
   "pip_version": "20.3.4-patched",
   "prefer_older_binary": false,
   "requirements": [
-    "apache-airflow==2.6.0"
+    "apache-airflow==2.6.1"
   ],
   "requires_python": [
     "==3.10.*"
