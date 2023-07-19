@@ -17,7 +17,7 @@ This repo could be separated into two parts:
    + Because on Ubuntu 22.04, the default Python is Python 3.10.x
 3. No Python Virtual Environment needed
 
-You can install any version of Python via if `apt install` or `brew install` does not work:
+If `apt install` or `brew install` does not work, You can install any version of Python via:
 ```
 xmake l python.lua
 ```
